@@ -309,7 +309,6 @@ class AddEditForm(Ui_Form, QMainWindow):
         if f:
             self.title = ex.comboBox.currentText()
             req = self.cur.execute(f'SELECT * FROM coffee WHERE sort_title="{self.title}"').fetchone()
-            print(req)
             self.sort_title.setText(req[1])
             self.degree_of_roasting.setText(req[2])
             self.ground_or_grains.setText(req[3])
